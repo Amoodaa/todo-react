@@ -28,7 +28,7 @@ export default class extends Component {
     const { todoItems } = this.state;
     return (
       // anws, we want to pass a function to the child!, that enables it to do what?
-      // to pass the   input value to its parent?
+      // to pass the input value to its parent?
       // exactly, so try to do that.
       // what do you think? go to TodoInput
       <div>

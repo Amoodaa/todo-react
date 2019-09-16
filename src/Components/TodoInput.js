@@ -6,9 +6,14 @@ export default class TodoInput extends React.Component {
   userInput = ({ target: { value } }) => {
     this.setState({ input: value });
   };
+  handleAddItem = () => {
+    const { addItem } = this.props;
+    const { input } = this.state;
+    addItem(input);
+    this.setState({ input: "" });
+  };
   // I need here to pass that function as a prop or what?
   render() {
-    const { addItem } = this.props;
     const { input } = this.state;
     return (
       <div>
@@ -18,7 +23,7 @@ export default class TodoInput extends React.Component {
           value={input}
           onChange={this.userInput}
         />
-        <button onClick={addItem}>Add</button>
+        <button onClick={this.handleAddItem}>Add</button>
       </div>
     );
   }
