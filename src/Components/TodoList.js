@@ -32,7 +32,7 @@ export default class extends Component {
       // exactly, so try to do that.
       // what do you think? go to TodoInput
       <div>
-        <TodoInput addItemFunc={this.addItem} />
+        <TodoInput addItem={this.addItem} />
         <ul>
           {todoItems.map(item => (
             <TodoItem content={item.content} key={item.id} />
